@@ -15,6 +15,7 @@ import CourseInformationTabs from "../components/CourseInformationTabs";
 
 function Course() {
   const match = useMatch<LocationGenerics>();
+
   const [selectedTopic, setSelectedTopic] = useState<number | null>(null);
   const [openChapters, setOpenChapters] = useState<number[]>([]);
   const { data } = useGetCourse(match.params.courseId);
